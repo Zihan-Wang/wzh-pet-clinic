@@ -1,0 +1,15 @@
+package guru.springframework.wzhpetclinic.services;
+
+import java.util.Set;
+
+import guru.springframework.wzhpetclinic.model.Owner;
+
+public interface OwnerService {
+	Owner findByLastName(String lastName);
+	
+	Owner findById(Long id);
+	
+	Owner save(Owner owner);
+	
+	Set<Owner> findAll();
+}

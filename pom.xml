@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>guru.springframework</groupId>
 	<artifactId>wzh-pet-clinic</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>wzh-pet-clinic</name>
 	<description>ZIHAN Pet Clinic Project</description>
 
@@ -46,7 +46,7 @@
 	<developerConnection>
 	scm:git:https://github.com/Zihan-Wang/wzh-pet-clinic.git
 	</developerConnection>
-	  <tag>wzh-pet-clinic-0.0.3</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 </project>

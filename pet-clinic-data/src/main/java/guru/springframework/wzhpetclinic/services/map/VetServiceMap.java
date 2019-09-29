@@ -2,43 +2,38 @@ package guru.springframework.wzhpetclinic.services.map;
 
 import java.util.Set;
 
-import guru.springframework.wzhpetclinic.model.Owner;
-import guru.springframework.wzhpetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
-public class VetServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long>{
+import guru.springframework.wzhpetclinic.model.Vet;
+import guru.springframework.wzhpetclinic.services.VetService;
 
-	@Override
-	public Owner save(Owner object) {
-		// TODO Auto-generated method stub
-		return super.save(object.getId(), object);
-	}
-
-	@Override 
-	public
-	Set<Owner> findAll() {
-		// TODO Auto-generated method stub
-		return super.findAll();
-	}
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
 
 	@Override
-	public
-	Owner findById(Long id) {
+	public Set<Vet> findAll() {return super.findAll();}
+	
+	
+	@Override
+	public Vet findById(Long id) {
 		// TODO Auto-generated method stub
 		return super.findById(id);
 	}
 
 	@Override
-	public
-	void deleteById(Long id) {
+	public Vet save(Vet object) {
 		// TODO Auto-generated method stub
-		super.deleteById(id);
+		return super.save(object);
 	}
 
 	@Override
-	public
-	void delete(Owner object) {
+	public void delete(Vet object) {
 		// TODO Auto-generated method stub
 		super.delete(object);
 	}
+	
+	@Override
+	public void deleteById(Long id) { super.deleteById(id);}
+
 
 }

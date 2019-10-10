@@ -3,7 +3,6 @@ package guru.springframework.wzhpetclinic.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import guru.springframework.wzhpetclinic.services.OwnerService;
 
 @RequestMapping({"/owners"})

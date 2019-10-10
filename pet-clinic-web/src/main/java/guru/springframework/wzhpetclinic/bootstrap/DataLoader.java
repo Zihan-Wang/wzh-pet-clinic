@@ -19,6 +19,7 @@ import guru.springframework.wzhpetclinic.services.VetService;
 import guru.springframework.wzhpetclinic.services.VisitService;
 
 
+
 @Component
 public class DataLoader implements CommandLineRunner{
 

@@ -20,6 +20,7 @@ import guru.springframework.wzhpetclinic.services.VisitService;
 
 
 
+
 @Component
 public class DataLoader implements CommandLineRunner{
 

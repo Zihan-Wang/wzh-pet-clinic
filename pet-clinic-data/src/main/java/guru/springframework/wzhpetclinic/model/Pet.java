@@ -12,32 +12,40 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import guru.springframework.wzhpetclinic.model.Owner.OwnerBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Created by jt on 7/13/18.
- */
-
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name="pets")
 public class Pet extends BaseEntity{
 
+	@Builder
+    public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+        super(id);
+        this.name = name;
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+
+        if (visits == null || visits.size() > 0 ) {
+            this.visits = visits;
+        }
+    }
+	
 	@Column(name="name")
 	private String name;
 	
 	@ManyToOne
 	@JoinColumn(name="type_id")
     private PetType petType;
+	
 	@ManyToOne
 	@JoinColumn(name="owner_id")
 	private Owner owner;

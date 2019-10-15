@@ -1,4 +1,4 @@
-package guru.springframework.wzhpetclinic.bootstrap;
+ package guru.springframework.wzhpetclinic.bootstrap;
 
 
 import java.time.LocalDate;
@@ -17,10 +17,6 @@ import guru.springframework.wzhpetclinic.services.PetTypeService;
 import guru.springframework.wzhpetclinic.services.SpecialtyService;
 import guru.springframework.wzhpetclinic.services.VetService;
 import guru.springframework.wzhpetclinic.services.VisitService;
-
-
-
-
 @Component
 public class DataLoader implements CommandLineRunner{
 

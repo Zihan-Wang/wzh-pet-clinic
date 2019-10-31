@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import guru.springframework.wzhpetclinic.model.Owner;
 import guru.springframework.wzhpetclinic.services.OwnerService;
-
 @RequestMapping({"/owners"})
 @Controller
 public class OwnerController {

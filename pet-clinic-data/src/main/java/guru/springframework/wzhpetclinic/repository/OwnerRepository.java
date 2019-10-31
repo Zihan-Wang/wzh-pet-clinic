@@ -8,5 +8,5 @@ import guru.springframework.wzhpetclinic.model.Owner;
 
 public interface OwnerRepository extends CrudRepository<Owner, Long>{
 	Owner findByLastName(String lastName);
-	List<Owner> findAllByLastName(String lastName);
+	List<Owner> findAllByLastNameLike(String lastName);
 }

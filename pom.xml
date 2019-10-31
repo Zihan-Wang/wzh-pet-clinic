@@ -7,17 +7,28 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>guru.springframework</groupId>
 	<artifactId>wzh-pet-clinic</artifactId>
 	<version>0.0.4</version>
+	
 	<name>wzh-pet-clinic</name>
 	<description>ZIHAN Pet Clinic Project</description>
 
 	<properties>
-		<java.version>1.8</java.version>
-		 <start-class>guru.springframework.sfgpetclinic.WzhPetClinicApplication</start-class>
+		<java.version>11</java.version>
+		<jaxb.version>2.3.0</jaxb.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<start-class>guru.springframework.wzhpetclinic.WzhPetClinicApplication</start-class>
 	</properties>
 
+	<modules>
+        <module>pet-clinic-data</module>
+        <module>pet-clinic-web</module>
+    </modules>
 
 
     <packaging>pom</packaging>
@@ -40,6 +51,32 @@
 			        <autoVersionSubmodules>true</autoVersionSubmodules>
 			    </configuration>
 			</plugin>
+			  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>
+                        --illegal-access=permit
+                    </argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <argLine>
+                        --illegal-access=permit
+                    </argLine>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 	

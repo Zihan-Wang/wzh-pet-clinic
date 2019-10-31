@@ -1,12 +1,5 @@
 package guru.springframework.wzhpetclinic.services.map.springdatajpa;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
-
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,10 +12,19 @@ import guru.springframework.wzhpetclinic.repository.OwnerRepository;
 import guru.springframework.wzhpetclinic.repository.PetRepository;
 import guru.springframework.wzhpetclinic.repository.PetTypeRepository;
 
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.*;
+
 @ExtendWith(MockitoExtension.class)
 class OwnerSDJpaServiceTest {
 
-	public static final String LAST_NAME = "Smith";
+    public static final String LAST_NAME = "Smith";
     @Mock
     OwnerRepository ownerRepository;
 
@@ -113,5 +115,4 @@ class OwnerSDJpaServiceTest {
 
         verify(ownerRepository).deleteById(anyLong());
     }
-
 }

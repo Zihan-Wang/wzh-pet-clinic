@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: guru.springframework.wzhpetclinic.controllers.OwnerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.416 s - in guru.springframework.wzhpetclinic.controllers.OwnerControllerTest

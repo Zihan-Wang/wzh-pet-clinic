@@ -1,0 +1,8 @@
+guru\springframework\wzhpetclinic\WzhPetClinicApplication.class
+guru\springframework\wzhpetclinic\formatters\PetTypeFormatter.class
+guru\springframework\wzhpetclinic\controllers\VetController.class
+guru\springframework\wzhpetclinic\controllers\PetController.class
+guru\springframework\wzhpetclinic\controllers\IndexController.class
+guru\springframework\wzhpetclinic\controllers\VisitController.class
+guru\springframework\wzhpetclinic\controllers\OwnerController.class
+guru\springframework\wzhpetclinic\bootstrap\DataLoader.class
